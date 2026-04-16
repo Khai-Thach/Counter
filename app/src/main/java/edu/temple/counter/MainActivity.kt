@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -21,6 +22,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import edu.temple.counter.ui.theme.CounterTheme
@@ -46,7 +48,7 @@ fun Counter(modifier: Modifier = Modifier) {
             counterVal++
         }
         ) {
-            Text("Up")
+            Image(painterResource(android.R.drawable.arrow_up_float), "Up arrow")
         }
 
         Text(
@@ -61,7 +63,7 @@ fun Counter(modifier: Modifier = Modifier) {
             }
         }
         ) {
-            Text("Down")
+            Image(painterResource(android.R.drawable.arrow_down_float), "Down arrow")
         }
 
     }
