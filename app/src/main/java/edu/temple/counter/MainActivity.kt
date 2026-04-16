@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Counter(modifier: Modifier = Modifier) {
 
-    var counterVal: Int by remember { mutableStateOf(0) }
+    var counterVal: Int by rememberSaveable { mutableStateOf(0) }
 
     Column(modifier = modifier.fillMaxSize(), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
         Button(onClick = {
